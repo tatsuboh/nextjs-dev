@@ -24,7 +24,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Show outdated packages in summary
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const { stdout } = await exec.getExecOutput(`npm outdated --json`, [], {
